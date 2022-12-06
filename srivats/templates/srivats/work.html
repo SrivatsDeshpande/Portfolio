@@ -1,0 +1,40 @@
+{% include 'main.html' %}
+
+
+{% block content %}
+
+<h1 id="page-intro">I am a jack of all trades and this is the proof</h1>
+   
+
+
+
+<hr>
+
+{% for work in work %}
+
+<div class="exp-history">
+    
+    <div class="counter">
+        <p>{{forloop.counter}}. </p>
+    </div>
+    
+    <div class="exp-info">
+        <p> Designation: {{work.designation}}</p>
+        <p>Company: <span >{{work.company}}</span></p>
+        
+        <p>Duration: <span >{{work.from_date}} - {{work.to_date}}</span></p>
+        
+        <p>Description: <span>{{work.description}}</span></p>
+    </div>
+    <hr>
+
+</div>
+
+
+{% endfor %}
+
+
+
+    
+{% endblock content %}
+

@@ -1,0 +1,45 @@
+{% extends 'main.html' %}
+{% load static %}
+<link rel="stylesheet" type = "text/css" href="{% static 'styles/main.css' %} ">
+
+{% block content %}
+<h1 id="page-intro">I am a jack of all trades and this is the proof</h1>
+<hr>
+<div class="education-split">
+    
+
+    <div class="exp-history">
+        {% for edu in education %}
+        <div class="counter">
+            <p>{{forloop.counter}}. </p>
+        </div>
+        
+        <div class="exp-info">
+            <p> Course: {{edu.course}}</p>
+            <p>Institution: <span >{{edu.institution}}</span></p>
+            
+            <p>Duration: <span >{{edu.from_date}} - {{edu.to_date}}</span></p>
+            
+            <p>GPA: <span>{{edu.description}}</span></p>
+            
+        </div>
+        {% endfor %}
+    
+    </div>
+
+    
+    <div class="achievements">
+        <h3>These are my some of my achievements</h3>
+        <p>Gold badge in Python on Hackerrank</p>
+        <p>Gold badge in Python on Hackerrank</p>
+        <p>Gold badge in Python on Hackerrank</p>
+        <p>Gold badge in Python on Hackerrank</p>
+        
+        
+
+    </div>
+</div>
+
+
+
+{% endblock content %}

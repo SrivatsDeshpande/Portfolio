@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/main.css' %}">
+    
+</head>
+<body>
+    <div class="navigation-bar">
+        <div class="logo">
+            <a href="{% url 'home' %}">Srivats Deshpande</a>
+        </div>
+        <div class="links">
+            <a href="{% url 'work' %}">Career</a>
+            <a href="{% url 'education' %}">Education</a>
+            <a href="{% url 'projects' %}">Projects</a>
+            <a href="{% url 'hobbies' %}">Hobbies</a>
+            <a href="{% url 'resume' %}">Download Resume</a>
+        </div>
+    </div>
+</body>
+</html>

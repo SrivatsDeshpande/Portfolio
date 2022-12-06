@@ -1,0 +1,38 @@
+
+{% extends 'main.html' %}
+
+{% load static %}
+<head>
+    <title>Welcome</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/main.css' %}">
+</head>
+
+    
+
+
+
+
+{% block content %}
+{% include 'help.html' %}
+<div class="about-me">
+    <div class="intro-socials">
+        <div class="intro">
+            <p>Hello there, I'm Srivats!
+                I am a Software Developer with expertise in Django and love building Web Applications.
+                Welcome to my website! 
+            </p>
+        </div>
+        <div class="socials">
+           
+            <img src="{% static 'icons/linkedin.png' %}" id="icons">
+            <img src="{% static 'icons/github.png' %}" id="icons">
+            <img src="{% static 'icons/telephone.png' %}" id="icons">
+            <img src="{% static 'icons/email.png' %}" id="icons">
+        </div>
+    </div>
+    <div class="portfolio-img">
+        <img src="{% static 'images/srivats_formal.jpg' %}" id="main-img">
+    </div>
+</div>
+
+{% endblock content %}
